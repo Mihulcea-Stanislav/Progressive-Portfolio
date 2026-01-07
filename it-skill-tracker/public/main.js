@@ -84,7 +84,7 @@ function createSkillCard(skill) {
   if (state.currentSkillId === skill.id) card.classList.add('active');
   card.innerHTML = `
     <h3>${escapeHtml(skill.name)}</h3>
-    <p><b>Category: </b><span class="category-badge"><b>${escapeHtml(skill.category)}</b></span></p>
+    <p>Category: <span class="category-badge">${escapeHtml(skill.category)}</span></p>
     <div class="progress-bar">
       <div class="progress" style="width: ${Math.min(100, Math.max(0, skill.level))}%">
         ${skill.level}%
@@ -179,20 +179,20 @@ function updateStats() {
   container.innerHTML = `
     <div class="stat-grid">
       <div class="stat-item">
-        <span class="stat-label"><b>Total Skills:\u00A0</b></span>
-        <span class="stat-value"><b>${totalSkills}</b></span>
+        <span class="stat-label">Total Skills:\u00A0</span>
+        <span class="stat-value">${totalSkills}</span>
       </div>
       <div class="stat-item">
-        <span class="stat-label"><b>Average Level:\u00A0</b></span>
-        <span class="stat-value"><b>${averageLevel.toFixed(1)}%</b></span>
+        <span class="stat-label">Average Level:\u00A0</span>
+        <span class="stat-value">${averageLevel.toFixed(1)}%</span>
       </div>
       <div class="stat-item">
-        <span class="stat-label"><b>Completed Tasks:\u00A0</b></span>
-        <span class="stat-value"><b>${completedTasks} / ${totalTasks}</b></span>
+        <span class="stat-label">Completed Tasks:\u00A0</span>
+        <span class="stat-value">${completedTasks} / ${totalTasks}</span>
       </div>
       <div class="stat-item">
-        <span class="stat-label"><b>Completion Rate:\u00A0</b></span>
-        <span class="stat-value"><b>${completionRate}%</b></span>
+        <span class="stat-label">Completion Rate:\u00A0</span>
+        <span class="stat-value">${completionRate}%</span>
       </div>
     </div>
   `;
@@ -239,3 +239,4 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
